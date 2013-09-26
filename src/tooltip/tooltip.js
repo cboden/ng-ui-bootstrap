@@ -237,6 +237,9 @@ angular.module( 'ui.bootstrap.tooltip', [ 'ui.bootstrap.position', 'ui.bootstrap
               tooltip.remove();
             }
           }
+          
+          scope.show = show;
+          scope.hide = hide;
 
           /**
            * Observe the relevant attributes.
