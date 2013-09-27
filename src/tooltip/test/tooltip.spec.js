@@ -45,6 +45,16 @@ describe('tooltip', function() {
     expect( elmScope.tt_isOpen ).toBe( false );
   }));
 
+  it('should open on scope call', inject(function() {
+      elmScope.show();
+      expect (elmScope.tt_isOpen ).toBe( true );
+  }));
+
+  it('should close on scope call', inject(function() {
+      elmScope.hide();
+      expect (elmScope.tt_isOpen ).toBe( false );
+  }));
+
   it('should have default placement of "top"', inject(function() {
     elm.trigger( 'mouseenter' );
     expect( elmScope.tt_placement ).toBe( "top" );
